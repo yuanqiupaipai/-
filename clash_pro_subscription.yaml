@@ -1,0 +1,1246 @@
+allow-lan: true
+default1:
+  proxies:
+  - 直连
+  - 所有-手动
+  - 所有-自动
+  - 台日新韩-故转
+  - 香港-故转
+  - 台湾-故转
+  - 日本-故转
+  - 新加坡-故转
+  - 韩国-故转
+  - 美国-故转
+  - 英国-故转
+  - 其他-故转
+  - 拒绝
+  type: select
+default2:
+  proxies:
+  - 直连
+  - 所有-手动
+  - 所有-自动
+  - 香港-故转
+  - 台湾-故转
+  - 日本-故转
+  - 新加坡-故转
+  - 韩国-故转
+  - 美国-故转
+  - 英国-故转
+  - 泰国-故转
+  - 菲律宾-故转
+  - 马来西亚-故转
+  - 德国-故转
+  - 澳大利亚-故转
+  - 巴西-故转
+  - 越南-故转
+  - 印尼-故转
+  - 葡萄牙-故转
+  - 墨西哥-故转
+  - 西班牙-故转
+  - 其他-故转
+  - 拒绝
+  type: select
+dns:
+  enable: true
+  enhanced-mode: fake-ip
+  fake-ip-filter:
+  - +.lan
+  - +.local
+  - geosite:cn
+  - +.quickcht3.club
+  - +.kuaimao2.club
+  - +.onesubv.site
+  - +.oneyyds.online
+  - +.fengyyds.site
+  - +.onemg.top
+  - +.zhunchuanpb.com
+  - +.sevenka.top
+  - +.networklinkpro.net
+  - +.prosubnet02.eu
+  - +.4yfu73r3a4kl.com
+  - +.xiaoniuyun.cc
+  - +.huawei-cloud.shop
+  - +.huawei-cloud.vip
+  - +.gpt-agent.cc
+  - +.acwct.cn
+  - +.472361.xyz
+  - +.bingyun.ink
+  - +.fafhjkah.xyz
+  - +.66jc.top
+  - +.jueduibupao.top
+  - +.qeayr.cn
+  - +.saojc.xyz
+  - +.sssyun.xyz
+  - +.dler.cloud
+  - +.0tk8a3a1q4t94dler.com
+  - +.aerianas.top
+  fake-ip-range: 198.20.0.1/16
+  ipv6: true
+  listen: 0.0.0.0:7874
+  nameserver:
+  - 223.5.5.5
+external-controller: 0.0.0.0:9090
+external-ui: ui
+external-ui-name: zashboard
+external-ui-url: https://github.moeyy.xyz/https://github.com/Zephyruso/zashboard/archive/refs/heads/gh-pages.zip
+ipv6: true
+log-level: info
+mixed-port: 7893
+mode: rule
+port: 7890
+profile:
+  store-fake-ip: true
+  store-selected: true
+proxies: []
+proxy-groups:
+- name: ChatGPT
+  proxies:
+  - DIRECT
+  - 所有-手动
+  - 所有-自动
+  - 台日新韩-故转
+  - 香港-故转
+  - 台湾-故转
+  - 日本-故转
+  - 新加坡-故转
+  - 韩国-故转
+  - 美国-故转
+  - 英国-故转
+  - 其他-故转
+  - REJECT
+  type: select
+- name: Claude
+  proxies:
+  - DIRECT
+  - 所有-手动
+  - 所有-自动
+  - 台日新韩-故转
+  - 香港-故转
+  - 台湾-故转
+  - 日本-故转
+  - 新加坡-故转
+  - 韩国-故转
+  - 美国-故转
+  - 英国-故转
+  - 其他-故转
+  - REJECT
+  type: select
+- name: Meta AI
+  proxies:
+  - DIRECT
+  - 所有-手动
+  - 所有-自动
+  - 台日新韩-故转
+  - 香港-故转
+  - 台湾-故转
+  - 日本-故转
+  - 新加坡-故转
+  - 韩国-故转
+  - 美国-故转
+  - 英国-故转
+  - 其他-故转
+  - REJECT
+  type: select
+- name: Perplexity
+  proxies:
+  - DIRECT
+  - 所有-手动
+  - 所有-自动
+  - 台日新韩-故转
+  - 香港-故转
+  - 台湾-故转
+  - 日本-故转
+  - 新加坡-故转
+  - 韩国-故转
+  - 美国-故转
+  - 英国-故转
+  - 其他-故转
+  - REJECT
+  type: select
+- name: GitHub
+  proxies:
+  - DIRECT
+  - 所有-手动
+  - 所有-自动
+  - 台日新韩-故转
+  - 香港-故转
+  - 台湾-故转
+  - 日本-故转
+  - 新加坡-故转
+  - 韩国-故转
+  - 美国-故转
+  - 英国-故转
+  - 其他-故转
+  - REJECT
+  type: select
+- name: Telegram
+  proxies:
+  - DIRECT
+  - 所有-手动
+  - 所有-自动
+  - 台日新韩-故转
+  - 香港-故转
+  - 台湾-故转
+  - 日本-故转
+  - 新加坡-故转
+  - 韩国-故转
+  - 美国-故转
+  - 英国-故转
+  - 其他-故转
+  - REJECT
+  type: select
+- name: Twitter(X)
+  proxies:
+  - DIRECT
+  - 所有-手动
+  - 所有-自动
+  - 台日新韩-故转
+  - 香港-故转
+  - 台湾-故转
+  - 日本-故转
+  - 新加坡-故转
+  - 韩国-故转
+  - 美国-故转
+  - 英国-故转
+  - 其他-故转
+  - REJECT
+  type: select
+- name: WhatsApp
+  proxies:
+  - DIRECT
+  - 所有-手动
+  - 所有-自动
+  - 台日新韩-故转
+  - 香港-故转
+  - 台湾-故转
+  - 日本-故转
+  - 新加坡-故转
+  - 韩国-故转
+  - 美国-故转
+  - 英国-故转
+  - 其他-故转
+  - REJECT
+  type: select
+- name: Facebook
+  proxies:
+  - DIRECT
+  - 所有-手动
+  - 所有-自动
+  - 台日新韩-故转
+  - 香港-故转
+  - 台湾-故转
+  - 日本-故转
+  - 新加坡-故转
+  - 韩国-故转
+  - 美国-故转
+  - 英国-故转
+  - 其他-故转
+  - REJECT
+  type: select
+- name: Steam
+  proxies:
+  - DIRECT
+  - 所有-手动
+  - 所有-自动
+  - 台日新韩-故转
+  - 香港-故转
+  - 台湾-故转
+  - 日本-故转
+  - 新加坡-故转
+  - 韩国-故转
+  - 美国-故转
+  - 英国-故转
+  - 其他-故转
+  - REJECT
+  type: select
+- name: Game
+  proxies:
+  - DIRECT
+  - 所有-手动
+  - 所有-自动
+  - 台日新韩-故转
+  - 香港-故转
+  - 台湾-故转
+  - 日本-故转
+  - 新加坡-故转
+  - 韩国-故转
+  - 美国-故转
+  - 英国-故转
+  - 其他-故转
+  - REJECT
+  type: select
+- name: YouTube
+  proxies:
+  - DIRECT
+  - 所有-手动
+  - 所有-自动
+  - 台日新韩-故转
+  - 香港-故转
+  - 台湾-故转
+  - 日本-故转
+  - 新加坡-故转
+  - 韩国-故转
+  - 美国-故转
+  - 英国-故转
+  - 其他-故转
+  - REJECT
+  type: select
+- name: TikTok
+  proxies:
+  - DIRECT
+  - 所有-手动
+  - 所有-自动
+  - 香港-故转
+  - 台湾-故转
+  - 日本-故转
+  - 新加坡-故转
+  - 韩国-故转
+  - 美国-故转
+  - 英国-故转
+  - 泰国-故转
+  - 菲律宾-故转
+  - 马来西亚-故转
+  - 德国-故转
+  - 澳大利亚-故转
+  - 巴西-故转
+  - 越南-故转
+  - 印尼-故转
+  - 葡萄牙-故转
+  - 墨西哥-故转
+  - 西班牙-故转
+  - 其他-故转
+  - REJECT
+  type: select
+- name: Disney
+  proxies:
+  - DIRECT
+  - 所有-手动
+  - 所有-自动
+  - 台日新韩-故转
+  - 香港-故转
+  - 台湾-故转
+  - 日本-故转
+  - 新加坡-故转
+  - 韩国-故转
+  - 美国-故转
+  - 英国-故转
+  - 其他-故转
+  - REJECT
+  type: select
+- name: Netflix
+  proxies:
+  - DIRECT
+  - 所有-手动
+  - 所有-自动
+  - 台日新韩-故转
+  - 香港-故转
+  - 台湾-故转
+  - 日本-故转
+  - 新加坡-故转
+  - 韩国-故转
+  - 美国-故转
+  - 英国-故转
+  - 其他-故转
+  - REJECT
+  type: select
+- name: HBO
+  proxies:
+  - DIRECT
+  - 所有-手动
+  - 所有-自动
+  - 台日新韩-故转
+  - 香港-故转
+  - 台湾-故转
+  - 日本-故转
+  - 新加坡-故转
+  - 韩国-故转
+  - 美国-故转
+  - 英国-故转
+  - 其他-故转
+  - REJECT
+  type: select
+- name: Spotify
+  proxies:
+  - DIRECT
+  - 所有-手动
+  - 所有-自动
+  - 台日新韩-故转
+  - 香港-故转
+  - 台湾-故转
+  - 日本-故转
+  - 新加坡-故转
+  - 韩国-故转
+  - 美国-故转
+  - 英国-故转
+  - 其他-故转
+  - REJECT
+  type: select
+- name: Crypto
+  proxies:
+  - DIRECT
+  - 所有-手动
+  - 所有-自动
+  - 台日新韩-故转
+  - 香港-故转
+  - 台湾-故转
+  - 日本-故转
+  - 新加坡-故转
+  - 韩国-故转
+  - 美国-故转
+  - 英国-故转
+  - 其他-故转
+  - REJECT
+  type: select
+- name: Amazon
+  proxies:
+  - DIRECT
+  - 所有-手动
+  - 所有-自动
+  - 台日新韩-故转
+  - 香港-故转
+  - 台湾-故转
+  - 日本-故转
+  - 新加坡-故转
+  - 韩国-故转
+  - 美国-故转
+  - 英国-故转
+  - 其他-故转
+  - REJECT
+  type: select
+- name: Apple
+  proxies:
+  - DIRECT
+  - 所有-手动
+  - 所有-自动
+  - 台日新韩-故转
+  - 香港-故转
+  - 台湾-故转
+  - 日本-故转
+  - 新加坡-故转
+  - 韩国-故转
+  - 美国-故转
+  - 英国-故转
+  - 其他-故转
+  - REJECT
+  type: select
+- name: Microsoft
+  proxies:
+  - DIRECT
+  - 所有-手动
+  - 所有-自动
+  - 台日新韩-故转
+  - 香港-故转
+  - 台湾-故转
+  - 日本-故转
+  - 新加坡-故转
+  - 韩国-故转
+  - 美国-故转
+  - 英国-故转
+  - 其他-故转
+  - REJECT
+  type: select
+- name: Google
+  proxies:
+  - DIRECT
+  - 所有-手动
+  - 所有-自动
+  - 台日新韩-故转
+  - 香港-故转
+  - 台湾-故转
+  - 日本-故转
+  - 新加坡-故转
+  - 韩国-故转
+  - 美国-故转
+  - 英国-故转
+  - 其他-故转
+  - REJECT
+  type: select
+- name: Test
+  proxies:
+  - DIRECT
+  - 所有-手动
+  - 所有-自动
+  - 台日新韩-故转
+  - 香港-故转
+  - 台湾-故转
+  - 日本-故转
+  - 新加坡-故转
+  - 韩国-故转
+  - 美国-故转
+  - 英国-故转
+  - 其他-故转
+  - REJECT
+  type: select
+- name: Block
+  proxies:
+  - DIRECT
+  - 所有-手动
+  - 所有-自动
+  - 台日新韩-故转
+  - 香港-故转
+  - 台湾-故转
+  - 日本-故转
+  - 新加坡-故转
+  - 韩国-故转
+  - 美国-故转
+  - 英国-故转
+  - 其他-故转
+  - REJECT
+  type: select
+- name: 国外
+  proxies:
+  - DIRECT
+  - 所有-手动
+  - 所有-自动
+  - 台日新韩-故转
+  - 香港-故转
+  - 台湾-故转
+  - 日本-故转
+  - 新加坡-故转
+  - 韩国-故转
+  - 美国-故转
+  - 英国-故转
+  - 其他-故转
+  - REJECT
+  type: select
+- name: 国内
+  proxies:
+  - DIRECT
+  - 所有-手动
+  - 所有-自动
+  - 台日新韩-故转
+  - 香港-故转
+  - 台湾-故转
+  - 日本-故转
+  - 新加坡-故转
+  - 韩国-故转
+  - 美国-故转
+  - 英国-故转
+  - 其他-故转
+  - REJECT
+  type: select
+- name: 其他
+  proxies:
+  - DIRECT
+  - 所有-手动
+  - 所有-自动
+  - 台日新韩-故转
+  - 香港-故转
+  - 台湾-故转
+  - 日本-故转
+  - 新加坡-故转
+  - 韩国-故转
+  - 美国-故转
+  - 英国-故转
+  - 其他-故转
+  - REJECT
+  type: select
+- filter: ^((?!(直连|拒绝)).)*$
+  include-all: true
+  name: 所有-手动
+  type: select
+- filter: ^((?!(直连|拒绝)).)*$
+  include-all: true
+  interval: 300
+  name: 所有-自动
+  tolerance: 50
+  type: url-test
+- interval: 300
+  lazy: false
+  name: 香港-故转
+  proxies:
+  - 香港-手动
+  - 香港-自动
+  type: fallback
+- filter: (?=.*(广港|香港|HK|Hong Kong|🇭🇰|HongKong)).*$
+  include-all: true
+  name: 香港-手动
+  type: select
+- filter: (?=.*(广港|香港|HK|Hong Kong|🇭🇰|HongKong)).*$
+  include-all: true
+  interval: 300
+  name: 香港-自动
+  tolerance: 50
+  type: url-test
+- interval: 300
+  lazy: false
+  name: 台湾-故转
+  proxies:
+  - 台湾-手动
+  - 台湾-自动
+  type: fallback
+- filter: (?=.*(广台|台湾|台灣|TW|Tai Wan|🇹🇼|🇨🇳|TaiWan|Taiwan)).*$
+  include-all: true
+  name: 台湾-手动
+  type: select
+- filter: (?=.*(广台|台湾|台灣|TW|Tai Wan|🇹🇼|🇨🇳|TaiWan|Taiwan)).*$
+  include-all: true
+  interval: 300
+  name: 台湾-自动
+  tolerance: 50
+  type: url-test
+- interval: 300
+  lazy: false
+  name: 日本-故转
+  proxies:
+  - 日本-手动
+  - 日本-自动
+  type: fallback
+- filter: (?=.*(广日|日本|JP|川日|东京|大阪|泉日|埼玉|沪日|深日|🇯🇵|Japan)).*$
+  include-all: true
+  name: 日本-手动
+  type: select
+- filter: (?=.*(广日|日本|JP|川日|东京|大阪|泉日|埼玉|沪日|深日|🇯🇵|Japan)).*$
+  include-all: true
+  interval: 300
+  name: 日本-自动
+  tolerance: 50
+  type: url-test
+- interval: 300
+  lazy: false
+  name: 新加坡-故转
+  proxies:
+  - 新加坡-手动
+  - 新加坡-自动
+  type: fallback
+- filter: (?=.*(广新|新加坡|SG|坡|狮城|🇸🇬|Singapore)).*$
+  include-all: true
+  name: 新加坡-手动
+  type: select
+- filter: (?=.*(广新|新加坡|SG|坡|狮城|🇸🇬|Singapore)).*$
+  include-all: true
+  interval: 300
+  name: 新加坡-自动
+  tolerance: 50
+  type: url-test
+- interval: 300
+  lazy: false
+  name: 韩国-故转
+  proxies:
+  - 韩国-手动
+  - 韩国-自动
+  type: fallback
+- filter: (?=.*(广韩|韩国|韓國|KR|首尔|春川|🇰🇷|Korea)).*$
+  include-all: true
+  name: 韩国-手动
+  type: select
+- filter: (?=.*(广韩|韩国|韓國|KR|首尔|春川|🇰🇷|Korea)).*$
+  include-all: true
+  interval: 300
+  name: 韩国-自动
+  tolerance: 50
+  type: url-test
+- interval: 300
+  lazy: false
+  name: 美国-故转
+  proxies:
+  - 美国-手动
+  - 美国-自动
+  type: fallback
+- filter: (?=.*(广美|美|US|纽约|波特兰|达拉斯|俄勒|凤凰城|费利蒙|拉斯|洛杉|圣何塞|圣克拉|西雅|芝加|🇺🇸|United States)).*$
+  include-all: true
+  name: 美国-手动
+  type: select
+- filter: (?=.*(广美|美|US|纽约|波特兰|达拉斯|俄勒|凤凰城|费利蒙|拉斯|洛杉|圣何塞|圣克拉|西雅|芝加|🇺🇸|United States)).*$
+  include-all: true
+  interval: 300
+  name: 美国-自动
+  tolerance: 50
+  type: url-test
+- interval: 300
+  lazy: false
+  name: 英国-故转
+  proxies:
+  - 英国-手动
+  - 英国-自动
+  type: fallback
+- filter: (?=.*(英国|英|伦敦|UK|United Kingdom|🇬🇧|London)).*$
+  include-all: true
+  name: 英国-手动
+  type: select
+- filter: (?=.*(英国|英|伦敦|UK|United Kingdom|🇬🇧|London)).*$
+  include-all: true
+  interval: 300
+  name: 英国-自动
+  tolerance: 50
+  type: url-test
+- interval: 300
+  lazy: false
+  name: 泰国-故转
+  proxies:
+  - 泰国-手动
+  - 泰国-自动
+  type: fallback
+- filter: (?=.*(曼谷|泰国)).*$
+  include-all: true
+  name: 泰国-手动
+  type: select
+- filter: (?=.*(曼谷|泰国)).*$
+  include-all: true
+  interval: 300
+  name: 泰国-自动
+  tolerance: 50
+  type: url-test
+- interval: 300
+  lazy: false
+  name: 菲律宾-故转
+  proxies:
+  - 菲律宾-手动
+  - 菲律宾-自动
+  type: fallback
+- filter: (?=.*(菲律宾)).*$
+  include-all: true
+  name: 菲律宾-手动
+  type: select
+- filter: (?=.*(菲律宾)).*$
+  include-all: true
+  interval: 300
+  name: 菲律宾-自动
+  tolerance: 50
+  type: url-test
+- interval: 300
+  lazy: false
+  name: 马来西亚-故转
+  proxies:
+  - 马来西亚-手动
+  - 马来西亚-自动
+  type: fallback
+- filter: (?=.*(马来西亚)).*$
+  include-all: true
+  name: 马来西亚-手动
+  type: select
+- filter: (?=.*(马来西亚)).*$
+  include-all: true
+  interval: 300
+  name: 马来西亚-自动
+  tolerance: 50
+  type: url-test
+- interval: 300
+  lazy: false
+  name: 越南-故转
+  proxies:
+  - 越南-手动
+  - 越南-自动
+  type: fallback
+- filter: (?=.*(越南)).*$
+  include-all: true
+  name: 越南-手动
+  type: select
+- filter: (?=.*(越南)).*$
+  include-all: true
+  interval: 300
+  name: 越南-自动
+  tolerance: 50
+  type: url-test
+- interval: 300
+  lazy: false
+  name: 印尼-故转
+  proxies:
+  - 印尼-手动
+  - 印尼-自动
+  type: fallback
+- filter: (?=.*(印尼|印度尼西亚)).*$
+  include-all: true
+  name: 印尼-手动
+  type: select
+- filter: (?=.*(印尼|印度尼西亚)).*$
+  include-all: true
+  interval: 300
+  name: 印尼-自动
+  tolerance: 50
+  type: url-test
+- interval: 300
+  lazy: false
+  name: 德国-故转
+  proxies:
+  - 德国-手动
+  - 德国-自动
+  type: fallback
+- filter: (?=.*(德国)).*$
+  include-all: true
+  name: 德国-手动
+  type: select
+- filter: (?=.*(德国)).*$
+  include-all: true
+  interval: 300
+  name: 德国-自动
+  tolerance: 50
+  type: url-test
+- interval: 300
+  lazy: false
+  name: 澳大利亚-故转
+  proxies:
+  - 澳大利亚-手动
+  - 澳大利亚-自动
+  type: fallback
+- filter: (?=.*(澳大利亚)).*$
+  include-all: true
+  name: 澳大利亚-手动
+  type: select
+- filter: (?=.*(澳大利亚)).*$
+  include-all: true
+  interval: 300
+  name: 澳大利亚-自动
+  tolerance: 50
+  type: url-test
+- interval: 300
+  lazy: false
+  name: 巴西-故转
+  proxies:
+  - 巴西-手动
+  - 巴西-自动
+  type: fallback
+- filter: (?=.*(巴西)).*$
+  include-all: true
+  name: 巴西-手动
+  type: select
+- filter: (?=.*(巴西)).*$
+  include-all: true
+  interval: 300
+  name: 巴西-自动
+  tolerance: 50
+  type: url-test
+- interval: 300
+  lazy: false
+  name: 葡萄牙-故转
+  proxies:
+  - 葡萄牙-手动
+  - 葡萄牙-自动
+  type: fallback
+- filter: (?=.*(葡萄牙)).*$
+  include-all: true
+  name: 葡萄牙-手动
+  type: select
+- filter: (?=.*(葡萄牙)).*$
+  include-all: true
+  interval: 300
+  name: 葡萄牙-自动
+  tolerance: 50
+  type: url-test
+- interval: 300
+  lazy: false
+  name: 墨西哥-故转
+  proxies:
+  - 墨西哥-手动
+  - 墨西哥-自动
+  type: fallback
+- filter: (?=.*(墨西哥)).*$
+  include-all: true
+  name: 墨西哥-手动
+  type: select
+- filter: (?=.*(墨西哥)).*$
+  include-all: true
+  interval: 300
+  name: 墨西哥-自动
+  tolerance: 50
+  type: url-test
+- interval: 300
+  lazy: false
+  name: 西班牙-故转
+  proxies:
+  - 西班牙-手动
+  - 西班牙-自动
+  type: fallback
+- filter: (?=.*(西班牙)).*$
+  include-all: true
+  name: 西班牙-手动
+  type: select
+- filter: (?=.*(西班牙)).*$
+  include-all: true
+  interval: 300
+  name: 西班牙-自动
+  tolerance: 50
+  type: url-test
+- interval: 300
+  lazy: false
+  name: 台日新韩-故转
+  proxies:
+  - 台日新韩-手动
+  - 台日新韩-自动
+  type: fallback
+- filter: (?=.*(广台|广日|广新|广韩|广美|台湾|TW|Tai Wan|Taiwan|🇹🇼|🇨🇳|TaiWan|日本|JP|川日|东京|大阪|泉日|埼玉|沪日|深日|🇯🇵|Japan|新加坡|SG|坡|狮城|🇸🇬|Singapore|韩国|KR|首尔|春川|🇰🇷|Korea)).*$
+  include-all: true
+  name: 台日新韩-手动
+  type: select
+- filter: (?=.*(广台|广日|广新|广韩|广美|台湾|TW|Tai Wan|Taiwan|🇹🇼|🇨🇳|TaiWan|日本|JP|川日|东京|大阪|泉日|埼玉|沪日|深日|🇯🇵|Japan|新加坡|SG|坡|狮城|🇸🇬|Singapore|韩国|KR|首尔|春川|🇰🇷|Korea)).*$
+  include-all: true
+  interval: 300
+  name: 台日新韩-自动
+  tolerance: 50
+  type: url-test
+- interval: 300
+  lazy: false
+  name: 其他-故转
+  proxies:
+  - 其他-手动
+  - 其他-自动
+  type: fallback
+- filter: ^((?!(直连|拒绝|广港|香港|HK|Hong Kong|🇭🇰|HongKong|广台|台湾|台灣|TW|Tai Wan|🇹🇼|🇨🇳|TaiWan|Taiwan|广日|日本|JP|川日|东京|大阪|泉日|埼玉|沪日|深日|🇯🇵|Japan|广新|新加坡|SG|坡|狮城|🇸🇬|Singapore|广韩|韩国|韓國|KR|首尔|春川|🇰🇷|Korea|广美|美|US|纽约|波特兰|达拉斯|俄勒|凤凰城|费利蒙|拉斯|洛杉|圣何塞|圣克拉|西雅|芝加|🇺🇸|United
+    States|英国|UK|United Kingdom|伦敦|英|London|🇬🇧)).)*$
+  include-all: true
+  name: 其他-手动
+  type: select
+- filter: ^((?!(直连|拒绝|广港|香港|HK|Hong Kong|🇭🇰|HongKong|广台|台湾|台灣|TW|Tai Wan|🇹🇼|🇨🇳|TaiWan|Taiwan|广日|日本|JP|川日|东京|大阪|泉日|埼玉|沪日|深日|🇯🇵|Japan|广新|新加坡|SG|坡|狮城|🇸🇬|Singapore|广韩|韩国|韓國|KR|首尔|春川|🇰🇷|Korea|广美|美|US|纽约|波特兰|达拉斯|俄勒|凤凰城|费利蒙|拉斯|洛杉|圣何塞|圣克拉|西雅|芝加|🇺🇸|United
+    States|英国|UK|United Kingdom|伦敦|英|London|🇬🇧)).)*$
+  include-all: true
+  interval: 300
+  name: 其他-自动
+  tolerance: 50
+  type: url-test
+proxy-providers:
+  xfltd:
+    health-check:
+      enable: true
+      interval: 600
+      url: http://www.gstatic.com/generate_204
+    interval: 3600
+    path: ./proxy_providers/xfltd.yaml
+    type: http
+    url: https://sub.xfltd.me/api/v1/client/subscribe?token=dc8d6117e7fada43c429a4ef1cb2dd6f
+  奶昔:
+    health-check:
+      enable: true
+      interval: 600
+      url: http://www.gstatic.com/generate_204
+    interval: 3600
+    path: ./proxy_providers/牛逼.yaml
+    type: http
+    url: https://sub.nexconvert.com/?L2Rvd25sb2FkQ29uZmlnL0NsYXNoLmFzcHg/ZXE9bWFjJnVyaz03MmM3YWEwYS02ODcwLTRkNWMtYjAyNC04YjQzMDFkMTVkOWQmbW09MzU5OTU5JmUwZTNlMGNhNjMyZjQ4MQ==
+  猫熊:
+    health-check:
+      enable: true
+      interval: 600
+      url: http://www.gstatic.com/generate_204
+    interval: 3600
+    path: ./proxy_providers/猫熊.yaml
+    type: http
+    url: https://sub.maoxiongnet.com/sub?target=clash&udp=true&filename=maoxiong&interval=86400&append_info&url=https://gbshct.spphhnhg.top/link/x3ZgQq20q2Mymp6sfgkoK6WZnUHFTa61?clash=1&extend=1
+  猫耳云:
+    health-check:
+      enable: true
+      interval: 600
+      url: http://www.gstatic.com/generate_204
+    interval: 3600
+    path: ./proxy_providers/猫耳云.yaml
+    type: http
+    url: https://dy.m2dy.sbs/api/v1/client/subscribe?token=c76f23690cc8125c90facb37cc463dec
+redir-port: 7892
+rule-anchor:
+  class:
+    behavior: classical
+    format: text
+    interval: 86400
+    type: http
+  domain:
+    behavior: domain
+    format: mrs
+    interval: 86400
+    type: http
+  ip:
+    behavior: ipcidr
+    format: mrs
+    interval: 86400
+    type: http
+rule-providers:
+  Amazon / Domain:
+    behavior: domain
+    format: mrs
+    interval: 86400
+    type: http
+    url: https://github.moeyy.xyz/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/amazon.mrs
+  Apple / Domain:
+    behavior: domain
+    format: mrs
+    interval: 86400
+    type: http
+    url: https://github.moeyy.xyz/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/apple.mrs
+  Apple-CN / Domain:
+    behavior: domain
+    format: mrs
+    interval: 86400
+    type: http
+    url: https://github.moeyy.xyz/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/apple-cn.mrs
+  Binance / Domain:
+    behavior: domain
+    format: mrs
+    interval: 86400
+    type: http
+    url: https://github.moeyy.xyz/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/binance.mrs
+  Blizzard / Domain:
+    behavior: classical
+    format: text
+    interval: 86400
+    type: http
+    url: https://github.moeyy.xyz/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Blizzard/Blizzard.list
+  Block / Domain:
+    behavior: classical
+    format: text
+    interval: 86400
+    type: http
+    url: https://github.moeyy.xyz/https://raw.githubusercontent.com/liandu2024/clash/refs/heads/main/list/Block.list
+  Bybit / Domain:
+    behavior: domain
+    format: mrs
+    interval: 86400
+    type: http
+    url: https://github.moeyy.xyz/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/bybit.mrs
+  ChatGPT / Domain:
+    behavior: domain
+    format: mrs
+    interval: 86400
+    type: http
+    url: https://github.moeyy.xyz/https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/openai.mrs
+  China / Domain:
+    behavior: domain
+    format: mrs
+    interval: 86400
+    type: http
+    url: https://github.moeyy.xyz/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/cn.mrs
+  China / IP:
+    behavior: ipcidr
+    format: mrs
+    interval: 86400
+    type: http
+    url: https://github.moeyy.xyz/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/cn.mrs
+  Claude / Domain:
+    behavior: classical
+    format: text
+    interval: 86400
+    type: http
+    url: https://github.moeyy.xyz/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Claude/Claude.list
+  Direct / Domain:
+    behavior: classical
+    format: text
+    interval: 86400
+    type: http
+    url: https://github.moeyy.xyz/https://raw.githubusercontent.com/liandu2024/clash/refs/heads/main/list/Direct.list
+  Disney / Domain:
+    behavior: domain
+    format: mrs
+    interval: 86400
+    type: http
+    url: https://github.moeyy.xyz/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/disney.mrs
+  EA / Domain:
+    behavior: classical
+    format: text
+    interval: 86400
+    type: http
+    url: https://github.moeyy.xyz/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/EA/EA.list
+  Epic / Domain:
+    behavior: classical
+    format: text
+    interval: 86400
+    type: http
+    url: https://github.moeyy.xyz/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Epic/Epic.list
+  Facebook / Domain:
+    behavior: domain
+    format: mrs
+    interval: 86400
+    type: http
+    url: https://github.moeyy.xyz/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/facebook.mrs
+  Github / Domain:
+    behavior: domain
+    format: mrs
+    interval: 86400
+    type: http
+    url: https://github.moeyy.xyz/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/github.mrs
+  Globe / Domain:
+    behavior: classical
+    format: text
+    interval: 86400
+    type: http
+    url: https://github.moeyy.xyz/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Global/Global.list
+  Google / Domain:
+    behavior: domain
+    format: mrs
+    interval: 86400
+    type: http
+    url: https://github.moeyy.xyz/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/google.mrs
+  Google / IP:
+    behavior: ipcidr
+    format: mrs
+    interval: 86400
+    type: http
+    url: https://github.moeyy.xyz/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/google.mrs
+  HBO / Domain:
+    behavior: domain
+    format: mrs
+    interval: 86400
+    type: http
+    url: https://github.moeyy.xyz/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/hbo.mrs
+  Meta AI / Domain:
+    behavior: classical
+    format: text
+    interval: 86400
+    type: http
+    url: https://github.moeyy.xyz/https://raw.githubusercontent.com/liandu2024/clash/refs/heads/main/list/MetaAi.list
+  Microsoft / Domain:
+    behavior: domain
+    format: mrs
+    interval: 86400
+    type: http
+    url: https://github.moeyy.xyz/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/microsoft.mrs
+  Netflix / Domain:
+    behavior: domain
+    format: mrs
+    interval: 86400
+    type: http
+    url: https://github.moeyy.xyz/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/netflix.mrs
+  Netflix / IP:
+    behavior: ipcidr
+    format: mrs
+    interval: 86400
+    type: http
+    url: https://github.moeyy.xyz/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/netflix.mrs
+  Nintend / Domain:
+    behavior: classical
+    format: text
+    interval: 86400
+    type: http
+    url: https://github.moeyy.xyz/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Nintendo/Nintendo.list
+  OKX / Domain:
+    behavior: domain
+    format: mrs
+    interval: 86400
+    type: http
+    url: https://github.moeyy.xyz/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/okx.mrs
+  Perplexity / Domain:
+    behavior: domain
+    format: mrs
+    interval: 86400
+    type: http
+    url: https://github.moeyy.xyz/https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/perplexity.mrs
+  Private / Domain:
+    behavior: domain
+    format: mrs
+    interval: 86400
+    type: http
+    url: https://github.moeyy.xyz/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/private.mrs
+  Proxy / Domain:
+    behavior: classical
+    format: text
+    interval: 86400
+    type: http
+    url: https://github.moeyy.xyz/https://raw.githubusercontent.com/liandu2024/clash/refs/heads/main/list/Proxy.list
+  Sony / Domain:
+    behavior: classical
+    format: text
+    interval: 86400
+    type: http
+    url: https://github.moeyy.xyz/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Sony/Sony.list
+  Spotify / Domain:
+    behavior: domain
+    format: mrs
+    interval: 86400
+    type: http
+    url: https://github.moeyy.xyz/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/spotify.mrs
+  Steam / Domain:
+    behavior: domain
+    format: mrs
+    interval: 86400
+    type: http
+    url: https://github.moeyy.xyz/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/steam.mrs
+  TEST / Domain:
+    behavior: classical
+    format: text
+    interval: 86400
+    type: http
+    url: https://github.moeyy.xyz/https://raw.githubusercontent.com/liandu2024/clash/refs/heads/main/list/Check.list
+  Telegram / Domain:
+    behavior: domain
+    format: mrs
+    interval: 86400
+    type: http
+    url: https://github.moeyy.xyz/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/telegram.mrs
+  Telegram / IP:
+    behavior: ipcidr
+    format: mrs
+    interval: 86400
+    type: http
+    url: https://github.moeyy.xyz/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/telegram.mrs
+  TikTok / Domain:
+    behavior: domain
+    format: mrs
+    interval: 86400
+    type: http
+    url: https://github.moeyy.xyz/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/tiktok.mrs
+  Twitter / Domain:
+    behavior: domain
+    format: mrs
+    interval: 86400
+    type: http
+    url: https://github.moeyy.xyz/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/x.mrs
+  UBI / Domain:
+    behavior: classical
+    format: text
+    interval: 86400
+    type: http
+    url: https://github.moeyy.xyz/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/UBI/UBI.list
+  WhatsApp / Domain:
+    behavior: classical
+    format: text
+    interval: 86400
+    type: http
+    url: https://github.moeyy.xyz/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Whatsapp/Whatsapp.list
+  Youtube / Domain:
+    behavior: domain
+    format: mrs
+    interval: 86400
+    type: http
+    url: https://github.moeyy.xyz/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/youtube.mrs
+rules:
+- RULE-SET,TEST / Domain,Test
+- RULE-SET,Block / Domain,Block
+- RULE-SET,ChatGPT / Domain,ChatGPT
+- RULE-SET,Claude / Domain,Claude
+- RULE-SET,Meta AI / Domain,Meta AI
+- RULE-SET,Perplexity / Domain,Perplexity
+- RULE-SET,Github / Domain,GitHub
+- RULE-SET,Telegram / Domain,Telegram
+- RULE-SET,Telegram / IP,Telegram,no-resolve
+- RULE-SET,Twitter / Domain,Twitter(X)
+- RULE-SET,WhatsApp / Domain,WhatsApp
+- RULE-SET,Facebook / Domain,Facebook
+- RULE-SET,Amazon / Domain,Amazon
+- RULE-SET,Apple / Domain,Apple
+- RULE-SET,Apple-CN / Domain,Apple
+- RULE-SET,Microsoft / Domain,Microsoft
+- RULE-SET,OKX / Domain,Crypto
+- RULE-SET,Bybit / Domain,Crypto
+- RULE-SET,Binance / Domain,Crypto
+- RULE-SET,Youtube / Domain,YouTube
+- RULE-SET,TikTok / Domain,TikTok
+- RULE-SET,Netflix / Domain,Netflix
+- RULE-SET,Netflix / IP,Netflix,no-resolve
+- RULE-SET,Disney / Domain,Disney
+- RULE-SET,HBO / Domain,HBO
+- RULE-SET,Spotify / Domain,Spotify
+- RULE-SET,Steam / Domain,Steam
+- RULE-SET,Epic / Domain,Game
+- RULE-SET,EA / Domain,Game
+- RULE-SET,Blizzard / Domain,Game
+- RULE-SET,UBI / Domain,Game
+- RULE-SET,Sony / Domain,Game
+- RULE-SET,Nintend / Domain,Game
+- RULE-SET,Google / Domain,Google
+- RULE-SET,Google / IP,Google,no-resolve
+- RULE-SET,Proxy / Domain,国外
+- RULE-SET,Globe / Domain,国外
+- RULE-SET,Direct / Domain,国内
+- RULE-SET,China / Domain,国内
+- RULE-SET,China / IP,国内,no-resolve
+- RULE-SET,Private / Domain,国内
+- MATCH,其他
+secret: '123456'
+socks-port: 7891
+tproxy-port: 7895
+tun:
+  auto-detect-interface: false
+  auto-redirect: false
+  auto-route: false
+  device: utun
+  enable: true
+  endpoint-independent-nat: true
+  stack: gvisor
+  strict-route: false
