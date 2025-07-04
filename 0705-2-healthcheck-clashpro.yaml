@@ -1,0 +1,958 @@
+proxy-providers:
+  奶昔:
+    url: https://sub.nexconvert.com/?L2Rvd25sb2FkQ29uZmlnL0NsYXNoLmFzcHg/ZXE9cm91dGUmdXJrPTcyYzdhYTBhLTY4NzAtNGQ1Yy1iMDI0LThiNDMwMWQxNWQ5ZCZtbT0zNTk5NTkmZWE=
+    type: http
+    interval: 86400
+    health-check:
+      enable: true
+      url: https://www.gstatic.com/generate_204
+      interval: 300
+    proxy: DIRECT
+  猫熊:
+    url: https://sub.maoxiongnet.com/sub?target=clash&udp=true&filename=maoxiong&interval=86400&append_info&url=https://gbshct.spphhnhg.top/link/x3ZgQq20q2Mymp6sfgkoK6WZnUHFTa61?clash=1&extend=1
+    type: http
+    interval: 86400
+    health-check:
+      enable: true
+      url: https://www.gstatic.com/generate_204
+      interval: 300
+    proxy: DIRECT
+  猫耳云:
+    url: https://m2dy.whtjdasha.com/api/v1/client/subscribe?token=c76f23690cc8125c90facb37cc463dec
+    type: http
+    interval: 86400
+    health-check:
+      enable: true
+      url: https://www.gstatic.com/generate_204
+      interval: 300
+    proxy: DIRECT
+  牛逼:
+    url: https://zhuzhuzhu.whtjdasha.com/api/v1/client/subscribe?token=ea4d4f8f5f6e097ce0d636c4506f6a07
+    type: http
+    interval: 86400
+    health-check:
+      enable: true
+      url: https://www.gstatic.com/generate_204
+      interval: 300
+    proxy: DIRECT
+port: 7890
+socks-port: 7891
+redir-port: 7892
+mixed-port: 7893
+tproxy-port: 7895
+allow-lan: true
+mode: rule
+log-level: info
+external-controller: 0.0.0.0:9090
+secret: '123456'
+dns:
+  enable: true
+  listen: 0.0.0.0:7874
+  ipv6: true
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.20.0.1/16
+  nameserver:
+  - 223.5.5.5
+  fake-ip-filter:
+  - +.lan
+  - +.local
+  - geosite:cn
+  - +.quickcht3.club
+  - +.kuaimao2.club
+  - +.onesubv.site
+  - +.oneyyds.online
+  - +.fengyyds.site
+  - +.onemg.top
+  - +.zhunchuanpb.com
+  - +.sevenka.top
+  - +.networklinkpro.net
+  - +.prosubnet02.eu
+  - +.4yfu73r3a4kl.com
+  - +.xiaoniuyun.cc
+  - +.huawei-cloud.shop
+  - +.huawei-cloud.vip
+  - +.gpt-agent.cc
+  - +.acwct.cn
+  - +.472361.xyz
+  - +.bingyun.ink
+  - +.fafhjkah.xyz
+  - +.66jc.top
+  - +.jueduibupao.top
+  - +.qeayr.cn
+  - +.saojc.xyz
+  - +.sssyun.xyz
+  - +.dler.cloud
+  - +.0tk8a3a1q4t94dler.com
+  - +.aerianas.top
+ipv6: false
+tun:
+  enable: true
+  stack: gvisor
+  device: utun
+  endpoint-independent-nat: true
+  auto-route: false
+  auto-detect-interface: false
+  auto-redirect: false
+  strict-route: false
+profile:
+  store-selected: true
+  store-fake-ip: true
+default1:
+  type: select
+  proxies: &id001
+  - DIRECT
+  - 所有-智选
+  - 所有-手选
+  - 香港-智选
+  - 香港-故转
+  - 台日新韩-故转
+  - 台日新韩-智选
+  - 台湾-故转
+  - 日本-故转
+  - 新加坡-故转
+  - 韩国-故转
+  - 美国-故转
+  - 英国-故转
+  - 其他-故转
+  - REJECT
+default2:
+  type: select
+  proxies: &id002
+  - 香港-故转
+  - 台湾-故转
+  - 日本-故转
+  - 新加坡-故转
+  - 韩国-故转
+  - 美国-故转
+  - 英国-故转
+  - 泰国-故转
+  - 菲律宾-故转
+  - 马来西亚-故转
+  - 德国-故转
+  - 澳大利亚-故转
+  - 巴西-故转
+  - 越南-故转
+  - 印尼-故转
+  - 葡萄牙-故转
+  - 墨西哥-故转
+  - 西班牙-故转
+  - 其他-故转
+  - REJECT
+proxy-groups:
+- type: select
+  proxies: *id001
+  name: ChatGPT
+- type: select
+  proxies: *id001
+  name: Gemini
+- type: select
+  proxies: *id001
+  name: Copilot
+- type: select
+  proxies: *id001
+  name: Perplexity
+- type: select
+  proxies: *id001
+  name: Claude
+- type: select
+  proxies: *id001
+  name: Meta AI
+- type: select
+  proxies: *id001
+  name: GitHub
+- type: select
+  proxies: *id001
+  name: Reddit
+- type: select
+  proxies: *id001
+  name: Telegram
+- type: select
+  proxies: *id001
+  name: WhatsApp
+- type: select
+  proxies: *id001
+  name: Facebook
+- type: select
+  proxies: *id001
+  name: YouTube
+- type: select
+  proxies: *id002
+  name: TikTok
+- type: select
+  proxies: *id001
+  name: Netflix
+- type: select
+  proxies: *id001
+  name: HBO
+- type: select
+  proxies: *id001
+  name: Disney
+- type: select
+  proxies: *id001
+  name: Amazon
+- type: select
+  proxies: *id001
+  name: Crunchyroll
+- type: select
+  proxies: *id001
+  name: Spotify
+- type: select
+  proxies: *id001
+  name: Nvidia
+- type: select
+  proxies: *id001
+  name: Steam
+- type: select
+  proxies: *id001
+  name: Games
+- type: select
+  proxies: *id001
+  name: Crypto
+- type: select
+  proxies: *id001
+  name: Apple
+- type: select
+  proxies: *id001
+  name: Google
+- type: select
+  proxies: *id001
+  name: Microsoft
+- type: select
+  proxies: *id001
+  name: Test
+- type: select
+  proxies: *id001
+  name: Block
+- type: select
+  proxies: *id001
+  name: 国外
+- type: select
+  proxies: *id001
+  name: 国内
+- type: select
+  proxies: *id001
+  name: 其他
+- name: 所有-手选
+  type: select
+  include-all: true
+  filter: ^((?!(直连|拒绝)).)*$
+- name: 所有-智选
+  type: smart
+  include-all: true
+  policy-priority: 香港:1.2;牛逼:0.8
+  uselightgbm: true
+  collectdata: true
+  interval: 300
+  filter: ^((?!(直连|拒绝)).)*$
+- name: 香港-故转
+  type: fallback
+  interval: 300
+  lazy: false
+  proxies:
+  - 香港-手选
+  - 香港-智选
+- name: 香港-手选
+  type: select
+  include-all: true
+  filter: (?=.*(广港|香港|HK|Hong Kong|🇭🇰|HongKong|HKG)).*$
+- name: 香港-智选
+  type: smart
+  include-all: true
+  policy-priority: 牛逼:0.8;猫耳云:0.8;xfltd:0.8;猫耳云:0.8;xfltd:0.8
+  uselightgbm: true
+  collectdata: true
+  interval: 300
+  filter: (?=.*(广港|香港|HK|Hong Kong|🇭🇰|HongKong|HKG)).*$
+- name: 台日新韩-故转
+  type: fallback
+  interval: 300
+  lazy: false
+  proxies:
+  - 台日新韩-手选
+  - 台日新韩-智选
+- name: 台日新韩-手选
+  type: select
+  include-all: true
+  filter: (?=.*(广台|广日|广新|广韩|广美|台湾|TW|Tai Wan|Taiwan|🇹🇼|🇨🇳|TaiWan|日本|JP|川日|东京|大阪|泉日|埼玉|沪日|深日|🇯🇵|Japan|新加坡|SG|坡|狮城|🇸🇬|Singapore|韩国|KR|首尔|春川|🇰🇷|Korea)).*$
+- name: 台日新韩-智选
+  type: smart
+  include-all: true
+  policy-priority: 牛逼:0.8;猫耳云:0.8;xfltd:0.8
+  uselightgbm: true
+  collectdata: true
+  interval: 300
+  filter: (?=.*(广台|广日|广新|广韩|广美|台湾|TW|Tai Wan|Taiwan|🇹🇼|🇨🇳|TaiWan|日本|JP|川日|东京|大阪|泉日|埼玉|沪日|深日|🇯🇵|Japan|新加坡|SG|坡|狮城|🇸🇬|Singapore|韩国|KR|首尔|春川|🇰🇷|Korea)).*$
+- name: 泰国-故转
+  type: fallback
+  interval: 300
+  lazy: false
+  proxies:
+  - 泰国-手选
+  - 泰国-自动
+- name: 泰国-手选
+  type: select
+  include-all: true
+  filter: (?=.*(曼谷|泰国|Bangkok|BKK|清迈|Chiang Mai|CNX|普吉|Phuket|HKT|芭堤雅|Pattaya|PTY|宋卡|Songkhla|SGZ)).*$
+- name: 泰国-自动
+  type: url-test
+  tolerance: 50
+  include-all: true
+  interval: 300
+  filter: (?=.*(曼谷|泰国|Bangkok|BKK|清迈|Chiang Mai|CNX|普吉|Phuket|HKT|芭堤雅|Pattaya|PTY|宋卡|Songkhla|SGZ)).*$
+- name: 菲律宾-故转
+  type: fallback
+  interval: 300
+  lazy: false
+  proxies:
+  - 菲律宾-手选
+  - 菲律宾-自动
+- name: 菲律宾-手选
+  type: select
+  include-all: true
+  filter: (?=.*(菲律宾|马尼拉|Manila|MNL|宿务|Cebu|CEB|达沃|Davao|DVO|克拉克|Clark|CRK|碧瑶|Baguio|BAG)).*$
+- name: 菲律宾-自动
+  type: url-test
+  tolerance: 50
+  include-all: true
+  interval: 300
+  filter: (?=.*(菲律宾|马尼拉|Manila|MNL|宿务|Cebu|CEB|达沃|Davao|DVO|克拉克|Clark|CRK|碧瑶|Baguio|BAG)).*$
+- name: 马来西亚-故转
+  type: fallback
+  interval: 300
+  lazy: false
+  proxies:
+  - 马来西亚-手选
+  - 马来西亚-自动
+- name: 马来西亚-手选
+  type: select
+  include-all: true
+  filter: (?=.*(马来西亚|吉隆坡|Kuala Lumpur|KUL|新山|Johor Bahru|JHB|槟城|Penang|PEN|古晋|Kuching|KCH|亚庇|Kota
+    Kinabalu|BKI)).*$
+- name: 马来西亚-自动
+  type: url-test
+  tolerance: 50
+  include-all: true
+  interval: 300
+  filter: (?=.*(马来西亚|吉隆坡|Kuala Lumpur|KUL|新山|Johor Bahru|JHB|槟城|Penang|PEN|古晋|Kuching|KCH|亚庇|Kota
+    Kinabalu|BKI)).*$
+- name: 德国-故转
+  type: fallback
+  interval: 300
+  lazy: false
+  proxies:
+  - 德国-手选
+  - 德国-自动
+- name: 德国-手选
+  type: select
+  include-all: true
+  filter: (?=.*(德国|柏林|Berlin|BER|法兰克福|Frankfurt|FRA|慕尼黑|Munich|MUC|汉堡|Hamburg|HAM|杜塞尔多夫|Dusseldorf|DUS|科隆|Cologne|CGN|斯图加特|Stuttgart|STR)).*$
+- name: 德国-自动
+  type: url-test
+  tolerance: 50
+  include-all: true
+  interval: 300
+  filter: (?=.*(德国|柏林|Berlin|BER|法兰克福|Frankfurt|FRA|慕尼黑|Munich|MUC|汉堡|Hamburg|HAM|杜塞尔多夫|Dusseldorf|DUS|科隆|Cologne|CGN|斯图加特|Stuttgart|STR)).*$
+- name: 澳大利亚-故转
+  type: fallback
+  interval: 300
+  lazy: false
+  proxies:
+  - 澳大利亚-手选
+  - 澳大利亚-自动
+- name: 澳大利亚-手选
+  type: select
+  include-all: true
+  filter: (?=.*(澳大利亚|悉尼|Sydney|SYD|墨尔本|Melbourne|MEL|布里斯班|Brisbane|BNE|珀斯|Perth|PER|阿德莱德|Adelaide|ADL)).*$
+- name: 澳大利亚-自动
+  type: url-test
+  tolerance: 50
+  include-all: true
+  interval: 300
+  filter: (?=.*(澳大利亚|悉尼|Sydney|SYD|墨尔本|Melbourne|MEL|布里斯班|Brisbane|BNE|珀斯|Perth|PER|阿德莱德|Adelaide|ADL)).*$
+- name: 巴西-故转
+  type: fallback
+  interval: 300
+  lazy: false
+  proxies:
+  - 巴西-手选
+  - 巴西-自动
+- name: 巴西-手选
+  type: select
+  include-all: true
+  filter: (?=.*(巴西|圣保罗|Sao Paulo|SAO|里约|Rio de Janeiro|RIO|巴西利亚|Brasilia|BSB|萨尔瓦多|Salvador|SSA|福塔莱萨|Fortaleza|FOR|贝洛奥里藏特|Belo
+    Horizonte|BHZ|库里提巴|Curitiba|CWB)).*$
+- name: 巴西-自动
+  type: url-test
+  tolerance: 50
+  include-all: true
+  interval: 300
+  filter: (?=.*(巴西|圣保罗|Sao Paulo|SAO|里约|Rio de Janeiro|RIO|巴西利亚|Brasilia|BSB|萨尔瓦多|Salvador|SSA|福塔莱萨|Fortaleza|FOR|贝洛奥里藏特|Belo
+    Horizonte|BHZ|库里提巴|Curitiba|CWB)).*$
+- name: 越南-故转
+  type: fallback
+  interval: 300
+  lazy: false
+  proxies:
+  - 越南-手选
+  - 越南-自动
+- name: 越南-手选
+  type: select
+  include-all: true
+  filter: (?=.*(越南|河内|Hanoi|HAN|胡志明|Ho Chi Minh|HCMC|SGN|岘港|Da Nang|DAD|海防|Hai Phong|HPH|芹苴|Can
+    Tho|VCA)).*$
+- name: 越南-自动
+  type: url-test
+  tolerance: 50
+  include-all: true
+  interval: 300
+  filter: (?=.*(越南|河内|Hanoi|HAN|胡志明|Ho Chi Minh|HCMC|SGN|岘港|Da Nang|DAD|海防|Hai Phong|HPH|芹苴|Can
+    Tho|VCA)).*$
+- name: 印尼-故转
+  type: fallback
+  interval: 300
+  lazy: false
+  proxies:
+  - 印尼-手选
+  - 印尼-自动
+- name: 印尼-手选
+  type: select
+  include-all: true
+  filter: (?=.*(印度尼西亚|印尼|雅加达|Jakarta|CGK|泗水|Surabaya|SUB|万隆|Bandung|BDG|棉兰|Medan|MES|巴厘|Bali|DPS)).*$
+- name: 印尼-自动
+  type: url-test
+  tolerance: 50
+  include-all: true
+  interval: 300
+  filter: (?=.*(印度尼西亚|印尼|雅加达|Jakarta|CGK|泗水|Surabaya|SUB|万隆|Bandung|BDG|棉兰|Medan|MES|巴厘|Bali|DPS)).*$
+- name: 葡萄牙-故转
+  type: fallback
+  interval: 300
+  lazy: false
+  proxies:
+  - 葡萄牙-手选
+  - 葡萄牙-自动
+- name: 葡萄牙-手选
+  type: select
+  include-all: true
+  filter: (?=.*(葡萄牙|里斯本|Lisbon|LIS|波尔图|Porto|OPO|布拉加|Braga|BRG|科英布拉|Coimbra|CBP|法鲁|Faro|FAO)).*$
+- name: 葡萄牙-自动
+  type: url-test
+  tolerance: 50
+  include-all: true
+  interval: 300
+  filter: (?=.*(葡萄牙|里斯本|Lisbon|LIS|波尔图|Porto|OPO|布拉加|Braga|BRG|科英布拉|Coimbra|CBP|法鲁|Faro|FAO)).*$
+- name: 墨西哥-故转
+  type: fallback
+  interval: 300
+  lazy: false
+  proxies:
+  - 墨西哥-手选
+  - 墨西哥-自动
+- name: 墨西哥-手选
+  type: select
+  include-all: true
+  filter: (?=.*(墨西哥|墨西哥城|Mexico City|MEX|瓜达拉哈拉|Guadalajara|GDL|蒙特雷|Monterrey|MTY|提华纳|Tijuana|TIJ|坎昆|Cancun|CUN)).*$
+- name: 墨西哥-自动
+  type: url-test
+  tolerance: 50
+  include-all: true
+  interval: 300
+  filter: (?=.*(墨西哥|墨西哥城|Mexico City|MEX|瓜达拉哈拉|Guadalajara|GDL|蒙特雷|Monterrey|MTY|提华纳|Tijuana|TIJ|坎昆|Cancun|CUN)).*$
+- name: 西班牙-故转
+  type: fallback
+  interval: 300
+  lazy: false
+  proxies:
+  - 西班牙-手选
+  - 西班牙-自动
+- name: 西班牙-手选
+  type: select
+  include-all: true
+  filter: (?=.*(西班牙|马德里|Madrid|MAD|巴塞罗那|Barcelona|BCN|瓦伦西亚|Valencia|VLC|塞维利亚|Seville|SVQ|毕尔巴鄂|Bilbao|BIO)).*$
+- name: 西班牙-自动
+  type: url-test
+  tolerance: 50
+  include-all: true
+  interval: 300
+  filter: (?=.*(西班牙|马德里|Madrid|MAD|巴塞罗那|Barcelona|BCN|瓦伦西亚|Valencia|VLC|塞维利亚|Seville|SVQ|毕尔巴鄂|Bilbao|BIO)).*$
+- name: 台湾-故转
+  type: fallback
+  interval: 300
+  lazy: false
+  proxies:
+  - 台湾-手选
+  - 台湾-智选
+- name: 台湾-手选
+  type: select
+  include-all: true
+  filter: (?=.*(广台|台湾|台灣|TW|Tai Wan|🇹🇼|🇨🇳|TaiWan|Taiwan|台北|Taipei|TPE|台中|Taichung|TXG|高雄|Kaohsiung|KHH|台南|Tainan|TNN|新竹|Hsinchu|HSC|桃园|Taoyuan|TYO)).*$
+- name: 台湾-智选
+  type: smart
+  include-all: true
+  policy-priority: 牛逼:0.8;猫耳云:0.8;xfltd:0.8
+  uselightgbm: true
+  collectdata: true
+  interval: 300
+  filter: (?=.*(广台|台湾|台灣|TW|Tai Wan|🇹🇼|🇨🇳|TaiWan|Taiwan|台北|Taipei|TPE|台中|Taichung|TXG|高雄|Kaohsiung|KHH|台南|Tainan|TNN|新竹|Hsinchu|HSC|桃园|Taoyuan|TYO)).*$
+- name: 日本-故转
+  type: fallback
+  interval: 300
+  lazy: false
+  proxies:
+  - 日本-手选
+  - 日本-智选
+- name: 日本-手选
+  type: select
+  include-all: true
+  filter: (?=.*(广日|日本|JP|川日|东京|大阪|泉日|埼玉|沪日|深日|🇯🇵|名古屋|Nagoya|札幌|Sapporo|Japan|Tokyo|TOK|Osaka|OSA|NGO|SPK|福冈|Fukuoka|FUK|仙台|Sendai|SDJ|京都|Kyoto|KYO|广岛|Hiroshima|HIJ|横滨|Yokohama|YOK)).*$
+- name: 日本-智选
+  type: smart
+  include-all: true
+  policy-priority: 牛逼:0.8;猫耳云:0.8;xfltd:0.8
+  uselightgbm: true
+  collectdata: true
+  interval: 300
+  filter: (?=.*(广日|日本|JP|川日|东京|大阪|泉日|埼玉|沪日|深日|🇯🇵|名古屋|Nagoya|札幌|Sapporo|Japan|Tokyo|TOK|Osaka|OSA|NGO|SPK|福冈|Fukuoka|FUK|仙台|Sendai|SDJ|京都|Kyoto|KYO|广岛|Hiroshima|HIJ|横滨|Yokohama|YOK)).*$
+- name: 新加坡-故转
+  type: fallback
+  interval: 300
+  lazy: false
+  proxies:
+  - 新加坡-手选
+  - 新加坡-智选
+- name: 新加坡-手选
+  type: select
+  include-all: true
+  filter: (?=.*(广新|新加坡|SG|坡|狮城|🇸🇬|Singapore|SIN)).*$
+- name: 新加坡-智选
+  type: smart
+  include-all: true
+  policy-priority: 牛逼:0.8;猫耳云:0.8;xfltd:0.8
+  uselightgbm: true
+  collectdata: true
+  interval: 300
+  filter: (?=.*(广新|新加坡|SG|坡|狮城|🇸🇬|Singapore|SIN)).*$
+- name: 韩国-故转
+  type: fallback
+  interval: 300
+  lazy: false
+  proxies:
+  - 韩国-手选
+  - 韩国-智选
+- name: 韩国-手选
+  type: select
+  include-all: true
+  filter: (?=.*(广韩|韩国|韓國|KR|首尔|春川|🇰🇷|Korea|Seoul|SEL|釜山|Busan|PUS|仁川|Incheon|ICN|大邱|Daegu|TAE|大田|Daejeon|DJN|光州|Gwangju|KWJ|蔚山|Ulsan|USN)).*$
+- name: 韩国-智选
+  type: smart
+  include-all: true
+  policy-priority: 牛逼:0.8;猫耳云:0.8;xfltd:0.8
+  uselightgbm: true
+  collectdata: true
+  interval: 300
+  filter: (?=.*(广韩|韩国|韓國|KR|首尔|春川|🇰🇷|Korea|Seoul|SEL|釜山|Busan|PUS|仁川|Incheon|ICN|大邱|Daegu|TAE|大田|Daejeon|DJN|光州|Gwangju|KWJ|蔚山|Ulsan|USN)).*$
+- name: 美国-故转
+  type: fallback
+  interval: 300
+  lazy: false
+  proxies:
+  - 美国-手选
+  - 美国-智选
+- name: 美国-手选
+  type: select
+  include-all: true
+  filter: (?=.*(广美|美|US|纽约|波特兰|达拉斯|俄勒|凤凰城|费利蒙|拉斯|洛杉|圣何塞|圣克拉|西雅|芝加|🇺🇸|洛杉矶|Los Angeles|LA|西雅图|Seattle|芝加哥|Chicago|旧金山|San
+    Francisco|SF|United States|New York|NYC|San Jose|SJ|Portland|PDX|Dallas|DAL|休斯敦|Houston|HOU|迈阿密|Miami|MIA|亚特兰大|Atlanta|ATL|华盛顿|Washington|DC|丹佛|Denver|DEN|Phoenix|PHX|拉斯维加斯|Las
+    Vegas|LAS|夏洛特|Charlotte|CLT|波士顿|Boston|BOS|明尼阿波利斯|Minneapolis|MSP)).*$
+- name: 美国-智选
+  type: smart
+  include-all: true
+  policy-priority: 牛逼:0.8;猫耳云:0.8;xfltd:0.8
+  uselightgbm: true
+  collectdata: true
+  interval: 300
+  filter: (?=.*(广美|美|US|纽约|波特兰|达拉斯|俄勒|凤凰城|费利蒙|拉斯|洛杉|圣何塞|圣克拉|西雅|芝加|🇺🇸|洛杉矶|Los Angeles|LA|西雅图|Seattle|芝加哥|Chicago|旧金山|San
+    Francisco|SF|United States|New York|NYC|San Jose|SJ|Portland|PDX|Dallas|DAL|休斯敦|Houston|HOU|迈阿密|Miami|MIA|亚特兰大|Atlanta|ATL|华盛顿|Washington|DC|丹佛|Denver|DEN|Phoenix|PHX|拉斯维加斯|Las
+    Vegas|LAS|夏洛特|Charlotte|CLT|波士顿|Boston|BOS|明尼阿波利斯|Minneapolis|MSP)).*$
+- name: 英国-故转
+  type: fallback
+  interval: 300
+  lazy: false
+  proxies:
+  - 英国-手选
+  - 英国-智选
+- name: 英国-手选
+  type: select
+  include-all: true
+  filter: (?=.*(英国|英|伦敦|UK|United Kingdom|🇬🇧|London|LON|曼彻斯特|Manchester|MAN|伯明翰|Birmingham|BHX|利物浦|Liverpool|LPL|爱丁堡|Edinburgh|EDI|格拉斯哥|Glasgow|GLA|布里斯托|Bristol|BRS)).*$
+- name: 英国-智选
+  type: smart
+  include-all: true
+  policy-priority: 牛逼:0.8;猫耳云:0.8;xfltd:0.8
+  uselightgbm: true
+  collectdata: true
+  interval: 300
+  filter: (?=.*(英国|英|伦敦|UK|United Kingdom|🇬🇧|London|LON|曼彻斯特|Manchester|MAN|伯明翰|Birmingham|BHX|利物浦|Liverpool|LPL|爱丁堡|Edinburgh|EDI|格拉斯哥|Glasgow|GLA|布里斯托|Bristol|BRS)).*$
+- name: 其他-故转
+  type: fallback
+  interval: 300
+  lazy: false
+  proxies:
+  - 其他-手选
+  - 其他-智选
+- name: 其他-手选
+  type: select
+  include-all: true
+  filter: ^((?!(直连|拒绝|广港|香港|HK|Hong Kong|🇭🇰|HongKong|广台|台湾|台灣|TW|Tai Wan|🇹🇼|🇨🇳|TaiWan|Taiwan|广日|日本|JP|川日|东京|大阪|泉日|埼玉|沪日|深日|🇯🇵|Japan|广新|新加坡|SG|坡|狮城|🇸🇬|Singapore|广韩|韩国|韓國|KR|首尔|春川|🇰🇷|Korea|广美|美|US|纽约|波特兰|达拉斯|俄勒|凤凰城|费利蒙|拉斯|洛杉|圣何塞|圣克拉|西雅|芝加|🇺🇸|United
+    States|英国|UK|United Kingdom|伦敦|英|London|🇬🇧)).)*$
+- name: 其他-智选
+  type: smart
+  include-all: true
+  policy-priority: 牛逼:0.8;猫耳云:0.8;xfltd:0.8
+  uselightgbm: true
+  collectdata: true
+  interval: 300
+  filter: ^((?!(直连|拒绝|广港|香港|HK|Hong Kong|🇭🇰|HongKong|广台|台湾|台灣|TW|Tai Wan|🇹🇼|🇨🇳|TaiWan|Taiwan|广日|日本|JP|川日|东京|大阪|泉日|埼玉|沪日|深日|🇯🇵|Japan|广新|新加坡|SG|坡|狮城|🇸🇬|Singapore|广韩|韩国|韓國|KR|首尔|春川|🇰🇷|Korea|广美|美|US|纽约|波特兰|达拉斯|俄勒|凤凰城|费利蒙|拉斯|洛杉|圣何塞|圣克拉|西雅|芝加|🇺🇸|United
+    States|英国|UK|United Kingdom|伦敦|英|London|🇬🇧)).)*$
+rules:
+- RULE-SET,TEST / Domain,Test
+- RULE-SET,Block / Domain,Block
+- RULE-SET,ChatGPT / Domain,ChatGPT
+- RULE-SET,Claude / Domain,Claude
+- RULE-SET,Meta AI / Domain,Meta AI
+- RULE-SET,Perplexity / Domain,Perplexity
+- RULE-SET,Copilot / Domain,Copilot
+- RULE-SET,Gemini / Domain,Gemini
+- RULE-SET,Reddit / Domain,Reddit
+- RULE-SET,GitHub / Domain,GitHub
+- RULE-SET,Telegram / Domain,Telegram
+- RULE-SET,Telegram / IP,Telegram
+- RULE-SET,WhatsApp / Domain,WhatsApp
+- RULE-SET,Facebook / Domain,Facebook
+- RULE-SET,Apple / Domain,Apple
+- RULE-SET,Apple-CN / Domain,Apple
+- RULE-SET,Microsoft / Domain,Microsoft
+- RULE-SET,OKX / Domain,Crypto
+- RULE-SET,Bybit / Domain,Crypto
+- RULE-SET,Binance / Domain,Crypto
+- RULE-SET,Youtube / Domain,YouTube
+- RULE-SET,TikTok / Domain,TikTok
+- RULE-SET,Netflix / Domain,Netflix
+- RULE-SET,Netflix / IP,Netflix,no-resolve
+- RULE-SET,Disney / Domain,Disney
+- RULE-SET,Amazon / Domain,Amazon
+- RULE-SET,Crunchyroll / Domain,Crunchyroll
+- RULE-SET,HBO / Domain,HBO
+- RULE-SET,Spotify / Domain,Spotify
+- RULE-SET,Steam / Domain,Steam
+- RULE-SET,Epic / Domain,Games
+- RULE-SET,EA / Domain,Games
+- RULE-SET,Blizzard / Domain,Games
+- RULE-SET,UBI / Domain,Games
+- RULE-SET,PlayStation / Domain,Games
+- RULE-SET,Nintend / Domain,Games
+- RULE-SET,Google / Domain,Google
+- RULE-SET,Google / IP,Google,no-resolve
+- RULE-SET,Nvidia / Domain,Nvidia
+- RULE-SET,Telegram / IP,国外
+- RULE-SET,Telegram / Domain,国外
+- RULE-SET,Proxy / Domain,国外
+- RULE-SET,Globe / Domain,国外
+- RULE-SET,Direct / Domain,国内
+- RULE-SET,China / Domain,国内
+- RULE-SET,China / IP,国内,no-resolve
+- RULE-SET,Private / Domain,国内
+- MATCH,其他
+rule-anchor:
+  ip:
+    type: http
+    interval: 86400
+    behavior: ipcidr
+    format: mrs
+  domain:
+    type: http
+    interval: 86400
+    behavior: domain
+    format: mrs
+  class:
+    type: http
+    interval: 86400
+    behavior: classical
+    format: text
+rule-providers:
+  TEST / Domain:
+    type: http
+    interval: 86400
+    behavior: classical
+    format: text
+    url: https://gh-proxy.com/raw.githubusercontent.com/liandu2024/clash/refs/heads/main/list/Check.list
+  ChatGPT / Domain:
+    type: http
+    interval: 86400
+    behavior: domain
+    format: mrs
+    url: https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/openai.mrs
+  Claude / Domain:
+    type: http
+    interval: 86400
+    behavior: classical
+    format: text
+    url: https://gh-proxy.com/raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Claude/Claude.list
+  Meta AI / Domain:
+    type: http
+    interval: 86400
+    behavior: classical
+    format: text
+    url: https://gh-proxy.com/raw.githubusercontent.com/liandu2024/clash/refs/heads/main/list/MetaAi.list
+  Perplexity / Domain:
+    type: http
+    interval: 86400
+    behavior: domain
+    format: mrs
+    url: https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/perplexity.mrs
+  Copilot / Domain:
+    type: http
+    interval: 86400
+    behavior: classical
+    format: text
+    url: https://gh-proxy.com/raw.githubusercontent.com/liandu2024/clash/refs/heads/main/list/Copilot.list
+  Gemini / Domain:
+    type: http
+    interval: 86400
+    behavior: classical
+    format: text
+    url: https://gh-proxy.com/raw.githubusercontent.com/liandu2024/clash/refs/heads/main/list/Gemini.list
+  GitHub / Domain:
+    type: http
+    interval: 86400
+    behavior: domain
+    format: mrs
+    url: https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/github.mrs
+  Telegram / Domain:
+    type: http
+    interval: 86400
+    behavior: domain
+    format: mrs
+    url: https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/telegram.mrs
+  Telegram / IP:
+    type: http
+    interval: 86400
+    behavior: ipcidr
+    format: mrs
+    url: https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geoip/telegram.mrs
+  Twitter / Domain:
+    type: http
+    interval: 86400
+    behavior: domain
+    format: mrs
+    url: https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/x.mrs
+  WhatsApp / Domain:
+    type: http
+    interval: 86400
+    behavior: classical
+    format: text
+    url: https://gh-proxy.com/raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Whatsapp/Whatsapp.list
+  Facebook / Domain:
+    type: http
+    interval: 86400
+    behavior: domain
+    format: mrs
+    url: https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/facebook.mrs
+  Amazon / Domain:
+    type: http
+    interval: 86400
+    behavior: domain
+    format: mrs
+    url: https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/amazon.mrs
+  Apple-CN / Domain:
+    type: http
+    interval: 86400
+    behavior: domain
+    format: mrs
+    url: https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/apple-cn.mrs
+  Apple / Domain:
+    type: http
+    interval: 86400
+    behavior: domain
+    format: mrs
+    url: https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/apple.mrs
+  Microsoft / Domain:
+    type: http
+    interval: 86400
+    behavior: domain
+    format: mrs
+    url: https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/microsoft.mrs
+  OKX / Domain:
+    type: http
+    interval: 86400
+    behavior: domain
+    format: mrs
+    url: https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/okx.mrs
+  Bybit / Domain:
+    type: http
+    interval: 86400
+    behavior: domain
+    format: mrs
+    url: https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/bybit.mrs
+  Binance / Domain:
+    type: http
+    interval: 86400
+    behavior: domain
+    format: mrs
+    url: https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/binance.mrs
+  TikTok / Domain:
+    type: http
+    interval: 86400
+    behavior: domain
+    format: mrs
+    url: https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/tiktok.mrs
+  Netflix / Domain:
+    type: http
+    interval: 86400
+    behavior: domain
+    format: mrs
+    url: https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/netflix.mrs
+  Netflix / IP:
+    type: http
+    interval: 86400
+    behavior: ipcidr
+    format: mrs
+    url: https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geoip/netflix.mrs
+  Disney / Domain:
+    type: http
+    interval: 86400
+    behavior: domain
+    format: mrs
+    url: https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/disney.mrs
+  HBO / Domain:
+    type: http
+    interval: 86400
+    behavior: domain
+    format: mrs
+    url: https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/hbo.mrs
+  Spotify / Domain:
+    type: http
+    interval: 86400
+    behavior: domain
+    format: mrs
+    url: https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/spotify.mrs
+  Steam / Domain:
+    type: http
+    interval: 86400
+    behavior: domain
+    format: mrs
+    url: https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/steam.mrs
+  Epic / Domain:
+    type: http
+    interval: 86400
+    behavior: classical
+    format: text
+    url: https://gh-proxy.com/raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Epic/Epic.list
+  EA / Domain:
+    type: http
+    interval: 86400
+    behavior: classical
+    format: text
+    url: https://gh-proxy.com/raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/EA/EA.list
+  Blizzard / Domain:
+    type: http
+    interval: 86400
+    behavior: classical
+    format: text
+    url: https://gh-proxy.com/raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Blizzard/Blizzard.list
+  UBI / Domain:
+    type: http
+    interval: 86400
+    behavior: classical
+    format: text
+    url: https://gh-proxy.com/raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/UBI/UBI.list
+  PlayStation / Domain:
+    type: http
+    interval: 86400
+    behavior: classical
+    format: text
+    url: https://gh-proxy.com/raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/PlayStation/PlayStation.list
+  Nintend / Domain:
+    type: http
+    interval: 86400
+    behavior: classical
+    format: text
+    url: https://gh-proxy.com/raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Nintendo/Nintendo.list
+  Proxy / Domain:
+    type: http
+    interval: 86400
+    behavior: classical
+    format: text
+    url: https://gh-proxy.com/raw.githubusercontent.com/liandu2024/clash/refs/heads/main/list/Proxy.list
+  Globe / Domain:
+    type: http
+    interval: 86400
+    behavior: classical
+    format: text
+    url: https://gh-proxy.com/raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Global/Global.list
+  Direct / Domain:
+    type: http
+    interval: 86400
+    behavior: classical
+    format: text
+    url: https://gh-proxy.com/raw.githubusercontent.com/liandu2024/clash/refs/heads/main/list/Direct.list
+  China / Domain:
+    type: http
+    interval: 86400
+    behavior: domain
+    format: mrs
+    url: https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/cn.mrs
+  China / IP:
+    type: http
+    interval: 86400
+    behavior: ipcidr
+    format: mrs
+    url: https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geoip/cn.mrs
+  Private / Domain:
+    type: http
+    interval: 86400
+    behavior: domain
+    format: mrs
+    url: https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/private.mrs
+  Block / Domain:
+    type: http
+    interval: 86400
+    behavior: classical
+    format: text
+    url: https://gh-proxy.com/raw.githubusercontent.com/liandu2024/clash/refs/heads/main/list/Block.list
+  Nvidia / Domain:
+    type: http
+    interval: 86400
+    behavior: classical
+    format: text
+    url: https://gh-proxy.com/raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Nvidia/Nvidia.list
+  Crunchyroll / Domain:
+    type: http
+    interval: 86400
+    behavior: classical
+    format: text
+    url: https://gh-proxy.com/raw.githubusercontent.com/liandu2024/clash/refs/heads/main/list/Crunchyroll.list
+  Reddit / Domain:
+    type: http
+    interval: 86400
+    behavior: domain
+    format: mrs
+    url: https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/reddit.mrs
+  Youtube / Domain:
+    type: http
+    interval: 86400
+    behavior: domain
+    format: mrs
+    url: https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/youtube.mrs
+  Google / Domain:
+    type: http
+    interval: 86400
+    behavior: domain
+    format: mrs
+    url: https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/google.mrs
+  Google / IP:
+    type: http
+    interval: 86400
+    behavior: ipcidr
+    format: mrs
+    url: https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geoip/google.mrs
